@@ -9,7 +9,7 @@
         android:id="@+id/to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Happy birthday to you!"
+        android:text="@string/happy_birthday"
         android:textSize="36sp" />
 
     <ImageView
@@ -17,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
         android:layout_alignParentRight="false"
         android:src="@drawable/androidparty" />
 
@@ -26,8 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="From Sachin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="false"
+        android:text="@string/from"
         android:textSize="36sp" />
 
 </RelativeLayout>

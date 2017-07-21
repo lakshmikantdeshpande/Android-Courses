@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Happy Birthday</string>
+    <string name="happy_birthday">Happy birthday to you!</string>
+    <string name="from">From Sachin</string>
 </resources>
