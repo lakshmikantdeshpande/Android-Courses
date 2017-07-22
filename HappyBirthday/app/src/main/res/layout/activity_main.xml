@@ -5,22 +5,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.happybirthday.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:contentDescription="@string/description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/androidparty" />
+
     <TextView
         android:id="@+id/to"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text="@string/happy_birthday"
-        android:textSize="36sp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="false"
-        android:src="@drawable/androidparty" />
-
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        tools:fontFamily="sans-serif" />
 
     <TextView
         android:id="@+id/from"
@@ -29,7 +33,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="false"
+        android:padding="20dp"
         android:text="@string/from"
-        android:textSize="36sp" />
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        tools:fontFamily="sans-serif" />
 
 </RelativeLayout>
