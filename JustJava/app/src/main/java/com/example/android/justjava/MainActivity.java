@@ -3,6 +3,7 @@ package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Interpolator;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -19,9 +20,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 10;
-
-        display(quantity / 0);
+        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+        int quantity = Integer.parseInt(quantityTextView.getText().toString());
         displayPrice(quantity * 5);
     }
 
@@ -35,12 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void increment(View view) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText(Integer.parseInt(quantityTextView.getText().toString() + 1) + "");
+        quantityTextView.setText(Integer.parseInt(quantityTextView.getText().toString()) + 1 + "");
     }
 
     public void decrement(View view) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText(Integer.parseInt(quantityTextView.getText().toString()) - 1 + "");
+        if (!quantityTextView.getText().equals("0"))
+            quantityTextView.setText(Integer.parseInt(quantityTextView.getText().toString()) - 1 + "");
     }
 
     /**
