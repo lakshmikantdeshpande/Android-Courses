@@ -282,9 +282,7 @@ public class ForecastFragment extends Fragment {
         protected void onPostExecute(String[] result) {
             if (result != null) {
                 mForecastAdapter.clear();
-                for (String forecast : result) {
-                    mForecastAdapter.add(forecast);
-                }
+                mForecastAdapter.addAll(result);
             }
         }
     }
