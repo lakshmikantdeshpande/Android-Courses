@@ -18,6 +18,7 @@ package com.example.android.sunshine.app;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -32,8 +33,38 @@ public class DetailActivity extends ActionBarActivity {
                     .add(R.id.container, new DetailFragment())
                     .commit();
         }
+        Log.i("Lifecycle", "OnCreate");
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("Lifecycle", "OnStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("Lifecycle", "OnStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("Lifecycle", "OnDestroy");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("Lifecycle", "OnPause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("Lifecycle", "OnResume");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
