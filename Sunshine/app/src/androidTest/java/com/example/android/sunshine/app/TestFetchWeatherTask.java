@@ -48,7 +48,7 @@ public class TestFetchWeatherTask extends AndroidTestCase{
                 locationId == -1);
 
         // test all this twice
-        for (int i = 0; i < 2; i++) {
+        for ( int i = 0; i < 2; i++ ) {
 
             // does the ID point to our location?
             Cursor locationCursor = getContext().getContentResolver().query(
