@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import static android.R.attr.value;
+
 public class MainActivity extends AppCompatActivity {
     private Button intentButton;
 
@@ -22,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Switching to the next Activity", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("key", "Value");
+
+                Person person = new Person("Superman", 97500d);
+                intent.putExtra("person", person);
                 startActivity(intent);
 
 
