@@ -20,9 +20,10 @@
         </activity>
 
         <receiver android:name=".MyBroadcastReceiver" >
+<!--        We are removing intent filter from here, because we don't want our BR to listen when app is not running
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-            </intent-filter>
+            </intent-filter>-->
         </receiver>
 
     </application>
