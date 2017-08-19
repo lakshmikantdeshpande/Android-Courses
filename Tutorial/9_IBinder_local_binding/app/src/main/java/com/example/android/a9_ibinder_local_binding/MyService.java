@@ -73,6 +73,10 @@ public class MyService extends Service {
         isRandomGeneratorOn = false;
     }
 
+    public int getRandomNumber() {
+        return mRandomNumber;
+    }
+
     class MyServiceBinder extends Binder {
         public MyService getService() {
             return MyService.this;
