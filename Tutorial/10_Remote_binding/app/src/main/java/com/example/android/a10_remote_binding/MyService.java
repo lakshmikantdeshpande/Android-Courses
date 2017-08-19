@@ -11,6 +11,7 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -26,12 +27,19 @@ public class MyService extends Service {
     private int mRandomNumber;
     private boolean isRandomGeneratorOn;
     private IBinder mBinder = new MyServiceBinder();
-    private Messenger messenger = new Messenger(new RandomNumberRequestHandler());
+    private Messenger randomNumberMessenger = new Messenger(new RandomNumberRequestHandler());
 
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        return messenger.getBinder();
+        Log.d(TAG, "Package Name: " + intent.getPackage());
+        if (intent.getPackage().equals("com.example.android.a10_remote_binding_client_side")) {
+            Toast.makeText(getApplicationContext(), "Correct Package", Toast.LENGTH_SHORT).show();
+            return randomNumberMessenger.getBinder();
+        } else {
+            Toast.makeText(getApplicationContext(), "Wrong Package", Toast.LENGTH_SHORT).show();
+            return null;
+        }
     }
 
     @Override

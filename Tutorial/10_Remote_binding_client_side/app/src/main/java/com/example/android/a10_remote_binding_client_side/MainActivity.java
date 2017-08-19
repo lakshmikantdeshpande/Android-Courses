@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         serviceIntent = new Intent();
         serviceIntent.setComponent(new ComponentName("com.example.android.a10_remote_binding", "com.example.android.a10_remote_binding.MyService"));
+        serviceIntent.setPackage(getPackageName());
     }
 
     @Override
