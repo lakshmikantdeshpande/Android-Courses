@@ -39,7 +39,7 @@ public class ChildActivity extends AppCompatActivity {
         // TODO (4) Create an if statement to check if this Intent has the extra we passed from MainActivity
         // TODO (5) If the Intent contains the correct extra, retrieve the text
         // TODO (6) If the Intent contains the correct extra, use it to set the TextView text
-        if (receivedIntent.hasExtra("key")) {
+        if (receivedIntent.hasExtra(Intent.EXTRA_TEXT)) {
             String receivedMessage = receivedIntent.getStringExtra("key");
             mDisplayText.setText(receivedMessage);
         }

@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                  * Once the Intent has been created, we can use Activity's method, "startActivity"
                  * to start the ChildActivity.
                  */
-                startChildActivityIntent.putExtra("key", messageToBePassed);
+                startChildActivityIntent.putExtra(Intent.EXTRA_TEXT, messageToBePassed);
                 startActivity(startChildActivityIntent);
             }
         });
